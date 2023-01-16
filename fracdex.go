@@ -11,6 +11,10 @@ const base62Digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv
 const smallestInt = "A00000000000000000000000000"
 const zero = "a0"
 
+func Validate(key string) error {
+	return validateOrderKey(key)
+}
+
 // KeyBetween returns a key that sorts lexicographically between a and b.
 // Either a or b can be empty strings. If a is empty it indicates smallest key,
 // If b is empty it indicates largest key.
